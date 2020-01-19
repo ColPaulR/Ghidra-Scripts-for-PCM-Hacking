@@ -123,8 +123,8 @@ for i in root.iter('XDFTABLE'):
 # 
 # 	$unused = $builder.AppendLine("MakeNameEx($address, `"$name`", nameFlags);")
     name=SanitizeName(name)
-    removeDataAt(address)
     print "createLabel("+mmeaddress+", "+name+", False)"
     address=toAddr(mmeaddress)
+    removeDataAt(address)
     createLabel(address, name, False)
 # }
